@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription
+{% endblock %}
+
+{% block body %}
+	<div class="login">
+		<h2>Inscription</h2>
+		<form method="POST" enctype="multipart/form-data">
+			{{ form_start(registrationForm) }}
+
+			{{ form_row(registrationForm.email) }}
+			{{ form_row(registrationForm.password) }}
+			{{ form_row(registrationForm.confirm_password) }}
+			{{ form_row(registrationForm.username) }}
+			{{ form_row(registrationForm.avatar) }}
+
+			<button type="submit" class="btn">S'inscrire</button>
+
+			{{ form_end(registrationForm) }}
+		</form>
+	</div>
+{% endblock %}
